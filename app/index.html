@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html ng-app="users">
+<head>
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="./calc.js"></script>
+  <link href="./bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+  * {box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+    .users-list li {
+      width: 300px; 
+      padding: 10px;
+      margin-bottom: 5px;
+      
+    }
+    .users-list li:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+    .block-inline {
+      float: right;
+      padding-left: 10px;
+    }
+
+    form {
+      padding: 20px;
+    }
+
+    form input[type="text"] {
+      width: 100%;
+      padding: 20px 0 20px 10px;
+
+    }
+  </style>
+</head>
+<body class="ng-cloak">
+  <div ng-controller="UsersCtrl" class="container">
+  <h1>Users App</h1>
+    <button class="btn" ng-click="openPopup()">Add user</button>
+    <h4>Users list</h4>
+    <ol class="users-list">
+      <li ng-repeat="user in usersList">
+      <div class="block-inline">      
+        <button class="btn" ng-click="openPopup({name: user.name, index: $index})">✐</button>
+        <button class="btn" ng-click="delete($index)">✕</button>
+      </div>
+      <p><i ng-bind="user.name"></i></p> 
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
