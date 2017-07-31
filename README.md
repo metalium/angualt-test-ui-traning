@@ -6,9 +6,11 @@ Demo test application and protractor tests.
 Setup
 -----
 
-    git clone https://github.com/juliemr/protractor-demo.git
-    cd protractor-demo
+    git clone https://github.com/trae-op/angualt-test-ui-traning.git
+    cd angualt-test-ui-traning
     npm install
+    cd app/
+    bower install
 
 To run
 ------
