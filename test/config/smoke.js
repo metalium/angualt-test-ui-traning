@@ -5,7 +5,8 @@ exports.config = {
   framework: 'jasmine2',
 
   specs: [
-    'spec.js'
+    '../smoke/*spec.js',
+    '../smoke/**/*spec.js'
   ],
 
   capabilities: {
